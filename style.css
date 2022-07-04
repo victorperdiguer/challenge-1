@@ -1,0 +1,50 @@
+/**** Reset ****/
+* {
+  margin: 0;
+  padding: 0;
+  font-size: 16px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+/**** Color variables ****/
+:root {
+  --primary-blue: #17c3b2;
+  --primary-orange: #fbe6c4;
+  --light-blue: lightcyan;
+  --basic-white: #fef9ef;
+  --secondary-red: #fe6d73;
+}
+
+body {
+  background-color: var(--basic-white);
+}
+
+/***** Typography ******/
+
+h1 {
+  font-size: 2rem;
+}
+
+h2 {
+  font-size: 1.8rem;
+}
+
+h3 {
+  font-size: 1.2rem;
+  color: var(--primary-orange);
+}
+
+h4 {
+  color: var(--primary-blue);
+  font-size: 1.2rem;
+}
+
+/**** Container *****/
+
+/***** Header ******/
+
+/***** Navbar styles ****/
+
+/***** Card styles ****/
+
+/******* Search input *******/
