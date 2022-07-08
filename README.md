@@ -97,10 +97,9 @@ article.card > button {
 
 The card looks much nicer, but we have a problem ⚠️: if you inspect the webpage with Chrome dev tools, you will see that we have to scroll right to see the whole content (so the cards are not 100%, but actually a little more). 
 
-That's because (and pay attention, because this is a biggie): **HTML and CSS by default ADD the values of width, padding, and margin**. So if we way: width 100px, and padding of 20px, the final result is width = 120px. 
-
-
 ![](docs/box-sizing.png)
+
+That's because (and pay attention, because this is a biggie): **HTML and CSS by default ADD the values of width, padding, and margin**. So if we way: width 100px, and padding of 20px, the final result is width = 140px (100px width + 20px padding right + 20px padding left)
 
 But we don't want that, we want that if we say "width: 100px", the final width be 100px. And if we add some padding, it should **substract** the padding from the whole width of the element. We have a property for that. Add, in the universal selector (*), the following property, so that it is applied in ALL of the elements of our project:
 
