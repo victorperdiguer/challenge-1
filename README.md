@@ -306,7 +306,7 @@ div#header {
 
 <br>
 
-And that's it. All done ✅!! When you are finished, [take this small quiz](https://forms.gle/nVJyqAMCQoxZHxyG7) to test your knowledge.
+And that's it. All done ✅!! 
 
 
 
