@@ -184,19 +184,32 @@ Let take a second and think about the final result we want and let's add the cod
 ![](docs/navbar.png)
 - The navbar occupies the 100% of the viewport's width and has 20px of padding. The background is the "basic white" color.
 - The list (NOT the list items, NOT the nav, the LIST) **should not have the list default bullets**.
-- The list ITEMS should be evenly spread through the navbar. We will use <code>display:flex</code> for that. Remember that, when we want something *flexed*, we have to apply it to the PARENT element ([CSS flex cheatsheet](https://css-tricks.com/snippets/css/a-guide-to-flexbox/)).
+- The list ITEMS should be evenly spread through the navbar. We will use <code>display:flex</code> for that. Remember that, when we want something *flexed*, we have to apply it to the PARENT element (check out the [CSS flex cheatsheet](https://css-tricks.com/snippets/css/a-guide-to-flexbox/)).
 - The icons of the navbar should have 50px of width.
-- And now the hard part. We want the navbar *sticked* to the bottom of the page so that if we scroll, we still see it. Which of [these positions](https://www.w3schools.com/css/css_positioning.asp) do you think is the right one?
+- And now the hard part. We want the navbar *fixed* to the bottom of the page so that if we scroll, we still see it. Which of [these positions](https://www.w3schools.com/css/css_positioning.asp) do you think is the right one?
+- When we do this previous step, the elements positioned fixed (our navbar) will be on top of the other elements, hiding or cutting the last elements (cards, buttons) of every page:
+
+![](docs/navbar-top.png)
+
+So, to make sure our navbar doesn't stay on top and hide any of the elements, cards and buttons of our application, we have to reserve some space for it. We can do that by adding some margin at the bottom of the body. How big? Approximately, the height of the navbar and a little more to give it a nice margin.
 
 <details>
 <summary>Check the solution when you are done</summary>
 
 ```css
+
+body {
+    background-color: var(--basic-white);
+  /*Add this line: */
+  margin-bottom: 100px;
+}
+
+
 nav {
   width: 100vw;
   padding: 20px;
   background-color: var(--basic-white);
-  position: sticky;
+  position: fixed;
   bottom: 0;
 }
 
